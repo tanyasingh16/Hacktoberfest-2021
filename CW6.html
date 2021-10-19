@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Code4Examples</title>
+        <meta charset="utf-8">
+        <style>
+            label{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculate Area and Perimeter of A Circle in JavaScript</h1>
+        <h2 id="area"></h2>
+        <h2 id="perimeter"></h2>
+        <label for="radius">Radius:
+            <input type="text" id="radius">
+        </label>
+        <button id="calcBtn">Calculate</button>
+        
+        <script>
+    
+            var radEl=document.querySelector("#radius");
+            
+            var calcBtn=document.querySelector("#calcBtn");
+            
+            var areagEl=document.querySelector("#area");
+            var perimeterEl=document.querySelector("#perimeter");
+            
+            //bind a function tothe onClick event the AddBtn
+            calcBtn.onclick=function(){
+                
+                //area formule pi*r^2
+                area=Number(radEl.value)*Number(radEl.value)*Math.PI;
+                
+                //perimeter formule 2*pi*r
+                perimeter=2*Number(radEl.value)*Math.PI;
+ 
+                
+                //write the results into #area #perimeter document 
+                areagEl.innerHTML="Area of rectange:"+Math.round(area);
+                perimeterEl.innerHTML="Perimeter of rectange:"+Math.round(perimeter);
+            }
+            
+            
+        </script>
+    </body>
+</html>
